@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "name": "IGA CASCO DE SEGURIDAD INDUSTRIAL",
+    "description": "Ala completa,Ajuste de Matraca, Clase \"E\"",
+    "precio": 202.5,
+    "image_url": "https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+    "favorite": true,
+    "isOffer": false
+  },
+  {
+    "id": 2,
+    "name": "IGA CASCO DE SEGURIDAD INDUSTRIAL",
+    "description": "Cachucha hit,Ajuste de Matraca, Clase \"G\" Impacto",
+    "precio": 141.5,
+    "image_url": "https://igaproductos.com.mx/wp-content/uploads/2024/07/HIT_AZUL_INTER2-1-e1722383211957.jpg",
+    "favorite": false,
+    "isOffer": true,
+    "offerDiscount": 25
+  },
+  {
+    "id": 3,
+    "name": "IGA CASCO DE SEGURIDAD INDUSTRIAL",
+    "description": "Ala completa,Ajuste de Matraca, Clase \"E\"",
+    "precio": 202.5,
+    "image_url": "https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+    "favorite": true,
+    "isOffer": false
+  },
+  {
+    "id": 4,
+    "name": "IGA CASCO DE SEGURIDAD INDUSTRIAL",
+    "description": "Cachucha hit,Ajuste de Matraca, Clase \"G\" Impacto",
+    "precio": 141.5,
+    "image_url": "https://igaproductos.com.mx/wp-content/uploads/2024/07/HIT_AZUL_INTER2-1-e1722383211957.jpg",
+    "favorite": false,
+    "isOffer": true,
+    "offerDiscount": 25
+  },
+  {
+    "id": 5,
+    "name": "IGA CASCO DE SEGURIDAD INDUSTRIAL",
+    "description": "Ala completa,Ajuste de Matraca, Clase \"E\"",
+    "precio": 202.5,
+    "image_url": "https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+    "favorite": true,
+    "isOffer": false
+  },
+  {
+    "id": 6,
+    "name": "IGA CASCO DE SEGURIDAD INDUSTRIAL",
+    "description": "Cachucha hit,Ajuste de Matraca, Clase \"G\" Impacto",
+    "precio": 141.5,
+    "image_url": "https://igaproductos.com.mx/wp-content/uploads/2024/07/HIT_AZUL_INTER2-1-e1722383211957.jpg",
+    "favorite": false,
+    "isOffer": true,
+    "offerDiscount": 25
+  },
+  {
+    "id": 7,
+    "name": "IGA CASCO DE SEGURIDAD INDUSTRIAL",
+    "description": "Ala completa,Ajuste de Matraca, Clase \"E\"",
+    "precio": 202.5,
+    "image_url": "https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+    "favorite": true,
+    "isOffer": false
+  },
+  {
+    "id": 8,
+    "name": "IGA CASCO DE SEGURIDAD INDUSTRIAL",
+    "description": "Cachucha hit,Ajuste de Matraca, Clase \"G\" Impacto",
+    "precio": 141.5,
+    "image_url": "https://igaproductos.com.mx/wp-content/uploads/2024/07/HIT_AZUL_INTER2-1-e1722383211957.jpg",
+    "favorite": false,
+    "isOffer": true,
+    "offerDiscount": 25
+  },
+  {
+    "id": 9,
+    "name": "IGA CASCO DE SEGURIDAD INDUSTRIAL DIELECTRICO",
+    "description": "Ala completa,Ajuste de Matraca, Clase \"E\"",
+    "precio": 202.5,
+    "image_url": "https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+    "favorite": true,
+    "isOffer": false
+  },
+  {
+    "id": 10,
+    "name": "IGA CASCO DE SEGURIDAD INDUSTRIAL DIELECTRICO",
+    "description": "Ala completa,Ajuste de Matraca, Clase \"E\"",
+    "precio": 202.5,
+    "image_url": "https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+    "favorite": true,
+    "isOffer": false
+  }
+]

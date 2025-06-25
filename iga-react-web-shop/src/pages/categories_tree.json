@@ -1,0 +1,86 @@
+{
+  "id": 1,
+  "category_name": "Cascos de seguridad Industrial",
+  "description": "Categoría principal de cascos industriales",
+  "subcategories": [
+    {
+      "id": 2,
+      "category_name": "Ala completa",
+      "description": "Cascos con ala completa",
+      "subcategories": [
+        {
+          "id": 3,
+          "category_name": "Ajuste de matraca",
+          "description": "Cascos con ajuste de matraca",
+          "subcategories": [
+            {
+              "id": 4,
+              "category_name": "Clase \"G\"",
+              "description": "Cascos Clase \"G\"",
+              "subcategories": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category_name": "Plagosur",
+      "description": "Marca de cascos Plagosur",
+      "subcategories": [
+        {
+          "id": 6,
+          "category_name": "Ajuste de matraca",
+          "description": "Cascos Plagosur con ajuste de matraca",
+          "subcategories": [
+            {
+              "id": 7,
+              "category_name": "Clase \"G\"",
+              "description": "Cascos Plagosur Ajuste Matraca Clase \"G\"",
+              "subcategories": []
+            },
+            {
+              "id": 8,
+              "category_name": "Clase \"E\"",
+              "description": "Cascos Plagosur Ajuste Matraca Clase \"E\"",
+              "subcategories": []
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "category_name": "Ajuste de intervalo",
+          "description": "Cascos Plagosur con ajuste de intervalo",
+          "subcategories": [
+            {
+              "id": 10,
+              "category_name": "Clase \"E\"",
+              "description": "Cascos Plagosur Ajuste Intervalo Clase \"E\"",
+              "subcategories": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "category_name": "Cachucha Hit",
+      "description": "Marca de cascos Cachucha Hit",
+      "subcategories": [
+        {
+          "id": 12,
+          "category_name": "Ajuste de Intervalo",
+          "description": "Cascos Cachucha Hit con ajuste de intervalo",
+          "subcategories": [
+            {
+              "id": 13,
+              "category_name": "Clase \"G\"",
+              "description": "Cascos Cachucha Hit Ajuste Intervalo Clase \"G\"",
+              "subcategories": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
