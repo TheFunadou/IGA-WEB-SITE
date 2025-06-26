@@ -22,6 +22,8 @@ import RestorePassword from './pages/registration_pages/RestorePassword';
 
 // User pages
 import ShippingAddresses from './pages/profile_pages/ShippingAddresses';
+import PersonalInfo from './pages/profile_pages/PersonalInfo';
+import UserOrders from './pages/profile_pages/UserOrders';
 
 
 // Not found page
@@ -31,11 +33,10 @@ import NotFound from './pages/NotFound';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProductDetail from './components/ProductDetail';
+import CookieConsent from './components/CookieConsent';
 
 // Test pages
 import PaginationTest from './pages/test/PaginationTest';
-
-
 
 const App: React.FC = () => {
 
@@ -69,8 +70,10 @@ const App: React.FC = () => {
           <Route path='/cambiar-contraseña' element={<RestorePassword/>}/>
           <Route path='/login' element={<Login/>}/>
 
-        {/* User pages */}
-        <Route path='/tu-cuenta/direcciones-de-envio' element={<ShippingAddresses/>}/>
+          {/* User pages */}
+          <Route path='/tu-cuenta/direcciones-de-envio' element={<ShippingAddresses/>}/>
+          <Route path='/tu-cuenta/informacion-personal' element={<PersonalInfo/>}/>
+          <Route path='/tu-cuenta/mis-compras' element={<UserOrders/>}/>
 
           {/* Test pages */}
           <Route path='/test-pagination' element={<PaginationTest/>}/>
@@ -79,6 +82,7 @@ const App: React.FC = () => {
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       <Footer/>
+      <CookieConsent/>
     </Router>
 
   );
