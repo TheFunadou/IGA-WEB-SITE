@@ -54,6 +54,7 @@ const ProductDetail: React.FC= () => {
                             <p className="font-bold pb-2 text-xl">SKU: 123123</p>
                             {/* Product status */}
                             <p className="font-semibold pb-2 text-green-500">Disponible</p>
+                            {/* Static content */}
                             <div className="flex justify-center items-center border-t-1 border-b-1 border-gray-300 py-5">
                                 <div className="w-1/4 flex flex-col items-center">
                                     <img

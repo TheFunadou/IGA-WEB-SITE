@@ -29,9 +29,9 @@ const Navbar: React.FC = () => {
                             <li className="hover:bg-[#054274] rounded-md duration-115 ease-in-out"><Link to="#">Ingles</Link></li>
                         </ul>
                     </div>
-                    <Link className="hover:scale-103 hover:font-bold duration-150 ease-in text-xs xl:text-base" to="/tu-cuenta/mis-compras">Mis compras</Link>
-                    <Link className="hover:scale-103 hover:font-bold duration-150 ease-in text-xs xl:text-base" to="">Favoritos</Link>
-                    <Link className="hover:scale-103 hover:font-bold duration-150 ease-in text-xs xl:text-base hidden" to="">Iniciar sesión</Link>
+                    <Link to="/tu-cuenta/mis-compras" className="hover:scale-103 hover:font-bold duration-150 ease-in text-xs xl:text-base">Mis compras</Link>
+                    <Link to="/tu-cuenta/mis-favoritos" className="hover:scale-103 hover:font-bold duration-150 ease-in text-xs xl:text-base">Favoritos</Link>
+                    <Link to="" className="hover:scale-103 hover:font-bold duration-150 ease-in text-xs xl:text-base hidden">Iniciar sesión</Link>
                     <div className="dropdown dropdown-center">
                         <div tabIndex={0} role="button" className="m-1 cursor-pointer text-xs xl:text-base font-bold">Tu cuenta</div>
                         <ul tabIndex={0} className="dropdown-content menu rounded-box z-1 w-40 md:w-52 md:px-2 md:py-5 mt-2 flex flex-col gap-5 bg-[#022544] text-xs md:text-base">
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
                             <li className="hover:bg-[#054274] rounded-md duration-115 ease-in-out"><Link to="#">Cerrar sesión <i className="bi bi-box-arrow-right"></i></Link></li>
                         </ul>
                     </div>
-                    <Link className="hover:scale-103 hover:font-bold duration-150 ease-in text-xs xl:text-base" to=""><i className="bi bi-cart"></i><span className="text-sm ml-2 font-bold px-1 xl:px-2 xl:py-1 bg-red-500 text-center rounded-full">0</span></Link>
+                    <Link to="/carrito-de-compras" className="hover:scale-103 hover:font-bold duration-150 ease-in text-xs xl:text-base"><i className="bi bi-cart"></i><span className="text-sm ml-2 font-bold px-1 xl:px-2 xl:py-1 bg-red-500 text-center rounded-full">0</span></Link>
                 </div>
             </div>
             <div className="w-full bg-[#022544] p-2 md:p-3 lg:p-2 flex items-center xl:pt-2 xl:pb-2 xl:pl-15 xl:pr-15">

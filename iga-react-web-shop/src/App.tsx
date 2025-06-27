@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 
 //Information pages
-import AcercaDeIGA  from './pages/submenu_pages/AcercaDeIGA';
+import AcercaDeIGA from './pages/submenu_pages/AcercaDeIGA';
 import Certificaciones from './pages/submenu_pages/Certificaciones';
 import Cobertura from './pages/submenu_pages/Cobertura';
 import Contacto from './pages/submenu_pages/Contacto';
@@ -24,6 +24,10 @@ import RestorePassword from './pages/registration_pages/RestorePassword';
 import ShippingAddresses from './pages/profile_pages/ShippingAddresses';
 import PersonalInfo from './pages/profile_pages/PersonalInfo';
 import UserOrders from './pages/profile_pages/UserOrders';
+import Favorites from './pages/profile_pages/Favorites';
+
+// Shopping cart
+import ShoppingCart from './pages/ShoppingCart';
 
 
 // Not found page
@@ -44,45 +48,49 @@ const App: React.FC = () => {
     // Define the routers here
     <Router>
       <Navbar />
-        <Routes>
-          {/* Main Pages */}
-          <Route path="/" element={<Home />} />
-          <Route path="/tienda" element={<Shop />} />
+      <Routes>
+        {/* Main Pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="/tienda" element={<Shop />} />
 
-          {/* Product detail */}
-          <Route path="/tienda/:sku" element={<ProductDetail/>} />
+        {/* Product detail */}
+        <Route path="/tienda/:sku" element={<ProductDetail />} />
 
-          {/* Information Pages */}
-          <Route path='/acerca-de-iga' element={<AcercaDeIGA/>}/>
-          <Route path='/certificaciones' element={<Certificaciones/>}/>
-          <Route path='/cobertura' element={<Cobertura/>}/>
-          <Route path='/contacto' element={<Contacto/>}/>
-          <Route path='/distribuidores' element={<Distribuidores/>}/>
-          <Route path='/bolsa-de-trabajo' element={<BolsaDeTrabajo/>}/>
-          <Route path='/directorio-de-pie-de-pagina' element={<FooterDirectory/>}/>
-          <Route path='/politica-de-devolucion' element={<PoliticaDevolucion/>}/>
-          <Route path='/politica-de-privacidad' element={<PoliticaPrivacidad/>}/>
+        {/* Information Pages */}
+        <Route path='/acerca-de-iga' element={<AcercaDeIGA />} />
+        <Route path='/certificaciones' element={<Certificaciones />} />
+        <Route path='/cobertura' element={<Cobertura />} />
+        <Route path='/contacto' element={<Contacto />} />
+        <Route path='/distribuidores' element={<Distribuidores />} />
+        <Route path='/bolsa-de-trabajo' element={<BolsaDeTrabajo />} />
+        <Route path='/directorio-de-pie-de-pagina' element={<FooterDirectory />} />
+        <Route path='/politica-de-devolucion' element={<PoliticaDevolucion />} />
+        <Route path='/politica-de-privacidad' element={<PoliticaPrivacidad />} />
 
 
-          {/* Registration pages */}
-          <Route path='/crear-cuenta' element={<CreateAcount/>}/>
-          <Route path='/recuperar-cuenta' element={<ForgotPassword/>}/>
-          <Route path='/cambiar-contraseña' element={<RestorePassword/>}/>
-          <Route path='/login' element={<Login/>}/>
+        {/* Registration pages */}
+        <Route path='/crear-cuenta' element={<CreateAcount />} />
+        <Route path='/recuperar-cuenta' element={<ForgotPassword />} />
+        <Route path='/cambiar-contraseña' element={<RestorePassword />} />
+        <Route path='/login' element={<Login />} />
 
-          {/* User pages */}
-          <Route path='/tu-cuenta/direcciones-de-envio' element={<ShippingAddresses/>}/>
-          <Route path='/tu-cuenta/informacion-personal' element={<PersonalInfo/>}/>
-          <Route path='/tu-cuenta/mis-compras' element={<UserOrders/>}/>
+        {/* User pages */}
+        <Route path='/tu-cuenta/direcciones-de-envio' element={<ShippingAddresses />} />
+        <Route path='/tu-cuenta/informacion-personal' element={<PersonalInfo />} />
+        <Route path='/tu-cuenta/mis-compras' element={<UserOrders />} />
+        <Route path="/tu-cuenta/mis-favoritos" element={<Favorites />} />
+
+        {/* Shopping cart */}
+        <Route path="/carrito-de-compras" element={<ShoppingCart />}/>
 
           {/* Test pages */}
-          <Route path='/test-pagination' element={<PaginationTest/>}/>
-          
+          <Route path='/test-pagination' element={<PaginationTest />} />
+
           {/* Not found page */}
-          <Route path='*' element={<NotFound/>}/>
-        </Routes>
-      <Footer/>
-      <CookieConsent/>
+          <Route path='*' element={<NotFound />} />
+      </Routes>
+      <Footer />
+      <CookieConsent />
     </Router>
 
   );
