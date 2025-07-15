@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const NavbarSubMenu: React.FC = () => {
     return (
         // The links of submenu is all here
-        <ul className="flex flex-col md:flex-row text-base md:text-xs xl:text-base md:items-center gap-4 md:gap-10 text-white p-1 xl:p-0">
+        <ul className="w-full flex flex-col xl:justify-between lg:flex-row text-base md:text-xs xl:text-base lg:items-center gap-4 md:gap-10 text-white p-1 xl:p-0">
             <li>
                 <Link className="hover:font-bold duration-150" to="/">Inicio</Link>
             </li>
@@ -34,6 +34,9 @@ const NavbarSubMenu: React.FC = () => {
                     </ul>
                 </div>
             </li>
+            <li>
+                <a href="tel:9222158300" className="font-bold underline text-xs xl:text-base" target="_blank">¿Tienes dudas? Llamanos al 921 215 8300| 01</a>
+            </li> 
         </ul>
     );
 };

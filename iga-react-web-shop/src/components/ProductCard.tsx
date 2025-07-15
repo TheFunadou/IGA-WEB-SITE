@@ -1,32 +1,55 @@
+// Hooks
 import { useState } from "react";
+
+// React Router
 import { Link } from "react-router-dom";
 
+// context
+import { useAppContext } from "../context/AppContext";
+
+
 type Props = {
+    sku: number;
     productName: string;
     category: string;
     // The sign "?" indicates that this property is optional
     price: number;
     imageUrl: string;
     favoriteInitialState?: boolean;
-    addToCart?: () => void;
-    onAddtoFavorites?: () => void;
     isOffer?: boolean;
     offerDiscount?: number;
 }
 
 
-const ProductCard: React.FC<Props> = ({ productName, category, price, imageUrl, favoriteInitialState = false, isOffer, offerDiscount, addToCart, onAddtoFavorites }) => {
+const ProductCard: React.FC<Props> = ({ sku, productName, category, price, imageUrl, favoriteInitialState = false, isOffer, offerDiscount }) => {
     const parts = category.split(",").map(part => part.trim());
 
+    // Add to favorites
     const [favorite, setFavorite] = useState<boolean>(favoriteInitialState);
+
+    const {triggerAlert, addToCart} = useAppContext();
 
     const toggleFavorite = () => {
         const newState = !favorite;
         setFavorite(newState);
-        
-        if(newState){
-            onAddtoFavorites?.();
+
+        if (newState) {
+            triggerAlert("favorite"); // <<--- Aquí mostramos el alert globalmente
         }
+    };
+
+    // Add to shopping cart
+    const handleAddtoCart = () => {
+        addToCart({
+            sku,
+            productName,
+            category,
+            unit_price:price,
+            quantity: 1,
+            imageUrl,
+            favorite,
+            isChecked: true
+        });
     };
 
 
@@ -63,15 +86,15 @@ const ProductCard: React.FC<Props> = ({ productName, category, price, imageUrl, 
                     {/* If the product is on sale and has a discount, this do actions for display the price data */}
                     {offerDiscount ? (
                         <div className="flex flex-col justify-end h-15 mt-2 md:mt-0">
-                            <p className="text-gray-400 line-through mr-2 text-base md:text-sm">${price.toFixed(2)}</p>
-                            <p className="text-green-500 font-bold text-2xl xl:text-2xl">${(price - ((offerDiscount * price) / 100)).toFixed(2)}</p>
+                            <p className="text-gray-400 line-through mr-2 text-base md:text-sm">${price.toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2})}</p>
+                            <p className="text-green-500 font-bold text-2xl xl:text-2xl">${(price - ((offerDiscount * price) / 100)).toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2})}</p>
                         </div>
                     ) : (
                         <div className="h-15 mt-2 md:mt-0 flex items-end justify-center">
-                            <p className="font-bold text-2xl xl:text-2xl flex items-end">${price.toFixed(2)}</p>
+                            <p className="font-bold text-2xl xl:text-2xl flex items-end">${price.toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2})}</p>
                         </div>
                     )}
-                    <button className="bg-[#054274] mt-2 p-2 text-xs xl:text-base rounded-md text-white font-bold hover:scale-110 duration-300 ease-in-out cursor-pointer" onClick={addToCart}>Añadir al carrito</button>
+                    <button className="bg-[#054274] mt-2 p-2 text-xs xl:text-base rounded-md text-white font-bold hover:scale-110 duration-300 ease-in-out cursor-pointer" onClick={handleAddtoCart}>Añadir al carrito</button>
                 </div>
             </Link>
 

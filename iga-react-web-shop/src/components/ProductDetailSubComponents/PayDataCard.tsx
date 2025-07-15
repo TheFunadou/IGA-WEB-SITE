@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 
 // Import hooks
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-const PayDataCard: React.FC = () => {
+type Prop = {
+    unitPrice: number;
+    stock: number;
+}
+
+const PayDataCard: React.FC<Prop> = ({unitPrice,stock}) => {
 
     // Define modalRef for contain the modal
     const modalRef = useRef<HTMLDialogElement>(null);
@@ -14,36 +19,45 @@ const PayDataCard: React.FC = () => {
         modal?.showModal();
     };
 
+    // Show and hide div if the user select a quantity greater than 5
+    const [selectedQuantity, setSelectedQuantity] = useState("1");
+
+    const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedQuantity(e.target.value);
+    };
+
+    const isMoreThanFive = selectedQuantity === "more";
+
     return (
         <div>
             <div className="bg-white rounded-md p-5 flex flex-col gap-5">
                 <div>
                     {/* Unit price */}
-                    <p className="text-4xl font-bold">$166.91 MXN</p>
+                    <p className="text-4xl font-bold">${unitPrice.toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2})}</p>
                     <Link to="/politica-de-devolucion" className="text-gray-400 underline text-sm" target="_blank">Politica de devolución PNC</Link>
                 </div>
                 {/* Show addresses modal */}
                 <div className="">
-                    <p className="font-bold">Costo de envio: <span className="text-gray-400">$150.00 MXN</span></p>
+                    <p className="font-bold">Costo de envio: <span className="text-gray-400">$00.00 MXN</span></p>
                     <button className="underline text-blue-500 not-italic text-sm cursor-pointer" onClick={handleShowModal}><i className="bi bi-geo-alt"></i> Enviar a Coatzacoalcos, 96XXX</button>
                 </div>
                 {/* Quantity */}
-                <div className="mb-5">
+                <div>
                     <p className="mb-2">Cantidad:</p>
-                    <select defaultValue={1} className="select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>Mas de 5</option>
+                    <select className="select" value={selectedQuantity} onChange={handleSelectChange}>
+                        <option value={"1"}>1 ({stock} disponibles)</option>
+                        <option value={"2"}>2</option>
+                        <option value={"3"}>3</option>
+                        <option value={"4"}>4</option>
+                        <option value={"5"}>5</option>
+                        <option value={"more"}>Mas de 5 ({stock} disponibles)</option>
                     </select>
                 </div>
-                <div className="hidden mb-5">
+                <div className={isMoreThanFive ? "block mt-2" : "hidden"}>
                     <p className="mb-2">Especifique una cantidad:</p>
                     <input type="number" className="w-full input" />
                 </div>
-                <div>
+                <div className="mt-5">
                     {/* Add to car */}
                     <button className="btn w-full text-center mb-5 bg-blue-500 text-white hover:bg-blue-950 duration-115 ease-in-out" title="Agregar producto al carrito">Agregar al carrito</button>
                     {/* Buy now */}

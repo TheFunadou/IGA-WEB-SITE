@@ -25,10 +25,11 @@ const PaginationTest: React.FC = () => {
             <div className="w-5/6 flex flex-wrap justify-evenly items-center sm:gap-5 border-2">
                 {currentItems.map((product) => (
                     <ProductCard
-                        key={product.id}
+                        key={product.sku}
+                        sku={product.sku}
                         productName={product.name}
                         category={product.description}
-                        price={product.precio}
+                        price={product.price}
                         imageUrl={product.image_url}
                         favoriteInitialState={product.favorite}
                         isOffer={product.isOffer}

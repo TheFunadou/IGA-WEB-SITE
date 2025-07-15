@@ -5,7 +5,7 @@ type Props = {
     style?: string;
 }
 
-const ProductCardSmall: React.FC<Props> = (style) => {
+const ProductCardExtraSmallVersion: React.FC<Props> = (style) => {
     return (
         <div>
             <Link to="">
@@ -24,4 +24,4 @@ const ProductCardSmall: React.FC<Props> = (style) => {
     );
 };
 
-export default ProductCardSmall;
+export default ProductCardExtraSmallVersion;

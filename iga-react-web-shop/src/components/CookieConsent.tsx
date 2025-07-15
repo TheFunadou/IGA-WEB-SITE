@@ -25,7 +25,7 @@ const CookieConsent: React.FC = () => {
   if (!showBanner) return null;
 
   return (
-    <div role="alert" className="alert alert-vertical sm:alert-horizontal fixed bottom-4 left-4 bg-gray-900 border-none text-white shadow-xl w-18/20 z-50 xl:w-1/4">
+    <div role="alert" className="alert alert-vertical sm:alert-horizontal fixed bottom-4 left-4 bg-gray-900 border-none text-white shadow-xl z-50">
       <i className="bi bi-exclamation-circle text-2xl"></i>
       <span>Usamos cookies para mejorar tu experiencia. ¿Deseas aceptarlas?</span>
       <div className="flex gap-2">

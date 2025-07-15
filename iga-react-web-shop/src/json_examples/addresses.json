@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "recipient_name": "Jose",
+        "recipient_last_names": "Martinez Lopez",
+        "country": "MEXICO",
+        "city": "MINATITLAN",
+        "state": "VERACRUZ",
+        "street": "LAS MISIONES",
+        "ext_number": "10",
+        "int_number": "",
+        "neighborhood": "SANTA CLARA",
+        "postal_code": "96709",
+        "contact_number": "9221678790",
+        "default_address": true,
+        "current_address": true
+    },
+    {
+        "id": 2,
+        "recipient_name": "Fabian",
+        "recipient_last_names": "Arevalos Garcia",
+        "country": "MEXICO",
+        "city": "MINATITLAN",
+        "state": "VERACRUZ",
+        "street": "IGNACIO ALLENDE",
+        "ext_number": "456",
+        "int_number": "",
+        "neighborhood": "LA BOMBA",
+        "postal_code": "96724",
+        "contact_number": "92387965789",
+        "default_address": false,
+        "current_address": true
+    },
+    {
+        "id": 3,
+        "recipient_name": "Pablo",
+        "recipient_last_names": "Hernandez",
+        "country": "MEXICO",
+        "city": "COATZACOALCOS",
+        "state": "VERACRUZ",
+        "street": "10 DE OCTUBRE",
+        "ext_number": "2342",
+        "int_number": "2",
+        "neighborhood": "CENTRO",
+        "postal_code": "96435",
+        "contact_number": "9221678790",
+        "default_address": false,
+        "current_address": true
+    }
+]

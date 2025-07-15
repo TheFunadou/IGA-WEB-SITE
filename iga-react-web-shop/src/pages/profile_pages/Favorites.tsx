@@ -1,84 +1,60 @@
 import { Link } from "react-router-dom";
 
 const Favorites: React.FC = () => {
-    return(
+    return (
         <div className="w-full flex justify-center">
-            <div className="w-3/4 p-5 ">
-            <p className="text-4xl font-bold">Mis favoritos</p>
-            <button className="mt-5 text-xl text-blue-500 font-bold underline"><i className="bi bi-funnel mr-2"></i>Filtros</button>
+            <div className="w-full xl:w-3/4 p-2 xl:p-5 ">
+                <p className="text-4xl font-bold">Mis favoritos</p>
+                <div className="w-full flex justify-between items-center">
+                    <button className="mt-5 text-xl text-blue-500 font-bold underline"><i className="bi bi-funnel mr-2"></i>Filtros</button>
+                    
+                </div>
                 <div className="w-full mt-5">
                     <div className="w-full bg-[#054274] rounded-tr-lg rounded-tl-lg px-5 py-3 text-white text-lg flex justify-between">
                         {/* Purchase date */}
                         <div>
-                            <p>Fecha de compra:</p>
-                            <p>26/06/20XX</p>
-                        </div>
-                        {/* Total */}
-                        <div>
-                            <p>Total:</p>
-                            <p>1200.00 MXN</p>
-                        </div>
-                        {/*Shipping to */}
-                        <div>
-                            <p>Enviado a:</p>
-                            <p>Nombre persona</p>
+                            <p className="text-sm lg:text-base">Añadido:</p>
+                            <p className="text-sm lg:text-base">26/06/20XX</p>
                         </div>
                         {/* Aditional actions */}
                         <div className="text-end">
-                            {/* Order number */}
-                            <p>Numero de pedido: 202506261042018</p>
-                            {/* Billing */}
-                            <Link to="" className="underline font-bold">Facturar pedido</Link>
+                            {/* Product category */}
+                            <p className="text-sm lg:text-base">Categoria: Cascos de seguridad</p>
                             {/* Order detail */}
-                            <Link to={""} className="underline font-bold ml-5">Ver detalles del pedido</Link>
+                            <Link to={""} className="underline font-bold ml-5 text-sm lg:text-base">Eliminar de favoritos</Link>
                         </div>
-                        
+
                     </div>
                     {/* Product detail */}
                     <div className="w-full bg-white px-5 py-3">
                         {/* Name of product */}
-                        <p className="font-bold text-2xl">CASCO DE SEGURIDAD INDUSTRIAL DIELETRICO</p>
-                        <p className="font-bold text-lg text-blue-500">Estatus: En transito</p>
-                        {/* Shipping number */}
-                        <p>Numero de seguimiento: 123456789876545</p>
-                        <div className="w-full flex text-lg mt-5">
-                            <div className="w-1/8">
+                        <p className="font-bold  lg:text-2xl">CASCO DE SEGURIDAD INDUSTRIAL DIELETRICO</p>
+                        <div className="w-full flex text-sm xl:text-lg mt-5">
+                            <div className="w-1/2 md:w-1/6 lg:w-1/8">
                                 <img className="w-full rounded-md" src="https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg" alt="" />
                             </div>
-                            <div className="w-5/5 grid grid-cols-4">
+                            <div className="flex flex-col items-start justify-start md:grid md:grid-cols-3 pl-2 lg:pl-0">
                                 {/* Model */}
-                                <div className="pl-2">
+                                <div className="lg:pl-2">
                                     <p>Ala completa</p>
                                     <p>Ajuste de matraca</p>
                                     <p>Clase "E"</p>
                                 </div>
                                 {/* Buy detail */}
-                                <div className=" border-blue-500">
-                                    <p>Cantidad: 5 pz</p>
+                                <div>
                                     <p>Linea de color:</p>
                                     <p>Color:</p>
                                 </div>
-                                <div className=" border-blue-500 text-center">
+                                <div className="text-center">
                                     {/* Link to shipping guide */}
-                                    <Link to={"#"} className="text-blue-500 font-bold underline">Seguimiento de envio</Link>
+                                    <button className="btn bg-[#054274] text-white w-full lg:w-3/4 mt-3 lg:mt-5 md:text-xs xl:text-base ">Agregar al carrito</button>
                                     {/* Buy again */}
-                                    <button className="btn bg-[#054274] text-white w-3/4 mt-5 ">Comprar otra vez</button>
-                                </div>
-                                <div className=" border-blue-500 text-center">
-                                    {/* Rate product */}
-                                    <span>
-                                        <i className="bi bi-star-fill text-amber-400"></i>
-                                        <i className="bi bi-star-fill text-amber-400"></i>
-                                        <i className="bi bi-star-fill text-amber-400"></i>
-                                        <i className="bi bi-star-fill text-amber-400"></i>
-                                        <i className="bi bi-star-fill text-amber-400"></i>
-                                    </span>
-                                    <p className="underline text-blue-500">Valorar producto</p>
+                                    <button className="btn bg-green-500 text-white w-full lg:w-3/4 mt-3 lg:mt-5 md:text-xs xl:text-base ">Comprar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

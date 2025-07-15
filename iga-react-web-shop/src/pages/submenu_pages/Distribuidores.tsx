@@ -1,5 +1,49 @@
+// Component
+import CustomCarouselDaysiUI from "../../components/CustomCarouselDaysiUI";
+import CustomCarouselTwoVersion from "../../components/CustomCarouselTwoVersion";
+
+// Types
+import type { CarouselImages } from "../../components/CustomCarouselDaysiUI";
 
 const Distribuidores: React.FC = () => {
+
+    const distribuidores: CarouselImages[] = [
+        {
+            id: 1,
+            image_url: "https://igaproductos.com.mx/wp-content/themes/igaproductos/images/distribuidor/distribuidor_1.jpg"
+        },
+        {
+            id: 2,
+            image_url: "https://igaproductos.com.mx/wp-content/themes/igaproductos/images/distribuidor/distribuidor_2.jpg"
+        },
+        {
+            id: 3,
+            image_url: "https://igaproductos.com.mx/wp-content/themes/igaproductos/images/distribuidor/distribuidor_3.jpg"
+        },
+        {
+            id: 4,
+            image_url: "https://igaproductos.com.mx/wp-content/themes/igaproductos/images/distribuidor/distribuidor_4.jpg"
+        },
+        {
+            id: 5,
+            image_url: "https://igaproductos.com.mx/wp-content/themes/igaproductos/images/distribuidor/distribuidor_5.jpg"
+        },
+        {
+            id: 6,
+            image_url: "https://igaproductos.com.mx/wp-content/themes/igaproductos/images/distribuidor/distribuidor_6.jpg"
+        },
+        {
+            id: 7,
+            image_url: "https://igaproductos.com.mx/wp-content/themes/igaproductos/images/distribuidor/distribuidor_7.jpg"
+        },
+        {
+            id: 8,
+            image_url: "https://igaproductos.com.mx/wp-content/themes/igaproductos/images/distribuidor/distribuidor_8.jpg"
+        },
+
+    ];
+
+
     return (
         <div>
             <div className="w-full p-10 md:p-25 bg-[url('https://igaproductos.com.mx/wp-content/uploads/2023/12/distribuidores-1.jpg')] bg-cover bg-center xl:bg-right">
@@ -12,6 +56,14 @@ const Distribuidores: React.FC = () => {
             </div>
             <div className="w-full flex flex-col items-center justify-center mt-5 p-5 md:p-0 mb-10">
                 <p className="text-2xl font-bold mb-5 text-center">Conoce a los distribuidores que confian en nosotros!</p>
+                {/* <div className="w-full md:w-3/4 flex items-center justify-center border flex-col">
+                    <div className="relative w-full border border-red-500">
+                        <CustomCarouselTwoVersion srcImages={distribuidores} slideDuration={2500} />
+                    </div>
+                    <div className="relative w-1/4 border border-red-500">
+                        <CustomCarouselDaysiUI srcImages={distribuidores} slideDuration={2500} carouselClassName="w-full" />
+                    </div>
+                </div> */}
                 <div className="w-full md:w-3/4 flex xl:pl-35 flex-wrap gap-4 items-center justify-center xl:justify-start">
                     <img className="rounded-xl w-1/3 md:w-1/4 xl:w-1/6" src="https://igaproductos.com.mx/wp-content/themes/igaproductos/images/distribuidor/distribuidor_1.jpg" alt="Myers logo" />
                     <img className="rounded-xl w-1/3 md:w-1/4 xl:w-1/6" src="https://igaproductos.com.mx/wp-content/themes/igaproductos/images/distribuidor/distribuidor_2.jpg" alt="Priosa logo" />

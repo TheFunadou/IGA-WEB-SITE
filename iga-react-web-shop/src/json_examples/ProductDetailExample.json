@@ -1,0 +1,64 @@
+{
+  "sku": 1200,
+  "color_line": "Linea Basica",
+  "color_name": "Amarillo basico",
+  "color_code": "#F7E03B",
+  "status": "Disponible",
+  "stock": 95,
+  "unit_price": 202.50,
+  "favorite": true, 
+
+  "product": { 
+    "id": 1, 
+    "product_name": "IGA CASCO DE SEGURIDAD INDUSTRIAL DIELETRICO",
+    "category": "Ala completa,Ajuste de Matraca, Clase \"E\"",
+    "technical_sheet_url": "https://www.peugeot.com.mx/content/dam/peugeot/mexico/b2c/tools/brochure/mar-25/2008-2025-low.pdf",
+    "certifications_url": "https://www.peugeot.com.mx/content/dam/peugeot/mexico/b2c/tools/certifications/mar-25/2008-2025-low.pdf",
+    "specs": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "recomendations": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "applications": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "certifications_desc": "NOM-2131,NOM-2132, NOM-2133, NOM-2134"
+  },
+  "images": [
+    {
+      "id": 1,
+      "image_url":"https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+      "main_image":true
+    },
+    {
+      "id": 2,
+      "image_url":"https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+      "main_image":false
+    },
+    {
+      "id": 3,
+      "image_url":"https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+      "main_image":false
+    },
+    {
+      "id": 4,
+      "image_url":"https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+      "main_image":false
+    },
+    {
+      "id": 5,
+      "image_url":"https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+      "main_image":false
+    },
+    {
+      "id": 6,
+      "image_url":"https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+      "main_image":false
+    },
+    {
+      "id": 7,
+      "image_url":"https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+      "main_image":false
+    },
+    {
+      "id": 8,
+      "image_url":"https://igaproductos.com.mx/wp-content/uploads/2024/07/hit_intervalo_amarillo-e1722380739491.jpg",
+      "main_image":false
+    }
+  ]
+}
