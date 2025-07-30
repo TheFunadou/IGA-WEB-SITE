@@ -29,7 +29,7 @@ const PersonalInfo: React.FC = () => {
         }
     }
 
-    
+
 
     return (
         <div className="py-5 xl:px-15 xl:py-10 w-full flex justify-center">
@@ -71,12 +71,12 @@ const PersonalInfo: React.FC = () => {
                     <div className="flex flex-col gap-5">
                         <div>
                             <p>Nombre actual: </p>
-                            <input type="text" title="Ingresar nuevo nombre" className="input w-full" placeholder="Ingresar nuevo nombre"/>
+                            <input type="text" title="Ingresar nuevo nombre" className="input w-full" placeholder="Ingresar nuevo nombre" />
                             <input type="text" title="Ingresar nuevos apellidos" className="input w-full mt-5" placeholder="Ingresar nuevos apellidos" />
                         </div>
                         <div>
                             <p>Numero telefonico actual: </p>
-                            <input type="text" title="Ingresar nuevo número telefonico" className="input w-full" placeholder="Ingresar nuevo número telefonico"/>
+                            <input type="text" title="Ingresar nuevo número telefonico" className="input w-full" placeholder="Ingresar nuevo número telefonico" />
                         </div>
                         <button className="btn mt-2 btn-primary">Guardar cambios</button>
                     </div>
@@ -89,33 +89,12 @@ const PersonalInfo: React.FC = () => {
                         {/* if there is a button in form, it will close the modal */}
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
-                    <p className="font-bold text-2xl mb-2">Elige tu ubicación</p>
-                    <p className="pt-2 text-gray-500 mb-5">El tiempo de entrega puede variar segun tu ubicación.</p>
-                    <div className="h-110 pr-2 overflow-auto overflow-x-hidden flex flex-col gap-4">
-                        {/* Addresses */}
-                        <div className="w-full flex flex-col gap-3 p-3 border-1 bg-gray-100 rounded-lg hover:border-blue-500 duration-150 ease-in-out">
-                            <p className="text-sm md:text-base"><strong>Luis N</strong>, Zaragoza #00</p>
-                            <p className="text-sm md:text-base">Centro, Coatzacoalcos, Veracruz, 96XXX</p>
-                            <strong className="mt-2 text-sm md:text-base">Dirección predeterminada.</strong>
-                        </div>
-                        <div className="w-full flex flex-col gap-3 p-3 border-1 bg-gray-100 rounded-lg hover:border-blue-500 duration-150 ease-in-out">
-                            <p className="text-sm md:text-base"><strong>Luis N</strong>, Zaragoza #00</p>
-                            <p className="text-sm md:text-base">Centro, Coatzacoalcos, Veracruz, 96XXX</p>
-                            <strong className="mt-2 text-sm md:text-base">Dirección predeterminada.</strong>
-                        </div>
-                        <div className="w-full flex flex-col gap-3 p-3 border-1 bg-gray-100 rounded-lg hover:border-blue-500 duration-150 ease-in-out">
-                            <p className="text-sm md:text-base"><strong>Luis N</strong>, Zaragoza #00</p>
-                            <p className="text-sm md:text-base">Centro, Coatzacoalcos, Veracruz, 96XXX</p>
-                            <strong className="mt-2 text-sm md:text-base">Dirección predeterminada.</strong>
-                        </div>
-                        <div className="w-full flex flex-col gap-3 p-3 border-1 bg-gray-100 rounded-lg hover:border-blue-500 duration-150 ease-in-out">
-                            <p className="text-sm md:text-base"><strong>Luis N</strong>, Zaragoza #00</p>
-                            <p className="text-sm md:text-base">Centro, Coatzacoalcos, Veracruz, 96XXX</p>
-                            <strong className="mt-2 text-sm md:text-base">Dirección predeterminada.</strong>
-                        </div>
-
+                    <p className="font-bold text-2xl mb-2">Correo electronico</p>
+                    <div className="w-full">
+                        <p>Correo electronico actual: </p>
+                        <input type="text" className="mt-2 input w-full" placeholder="Insertar nuevo correo electronico" title="ejem:alguien@correo.com" />
+                        <button className="btn w-full btn-primary text-white mt-5">Guardar cambios</button>
                     </div>
-                    {/* Link to add and edit addresses page */}
                 </div>
             </dialog>
             {/* Modal edit password */}
@@ -125,31 +104,13 @@ const PersonalInfo: React.FC = () => {
                         {/* if there is a button in form, it will close the modal */}
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
-                    <p className="font-bold text-2xl mb-2">Elige tu ubicación</p>
-                    <p className="pt-2 text-gray-500 mb-5">El tiempo de entrega puede variar segun tu ubicación.</p>
-                    <div className="h-110 pr-2 overflow-auto overflow-x-hidden flex flex-col gap-4">
-                        {/* Addresses */}
-                        <div className="w-full flex flex-col gap-3 p-3 border-1 bg-gray-100 rounded-lg hover:border-blue-500 duration-150 ease-in-out">
-                            <p className="text-sm md:text-base"><strong>Luis N</strong>, Zaragoza #00</p>
-                            <p className="text-sm md:text-base">Centro, Coatzacoalcos, Veracruz, 96XXX</p>
-                            <strong className="mt-2 text-sm md:text-base">Dirección predeterminada.</strong>
-                        </div>
-                        <div className="w-full flex flex-col gap-3 p-3 border-1 bg-gray-100 rounded-lg hover:border-blue-500 duration-150 ease-in-out">
-                            <p className="text-sm md:text-base"><strong>Luis N</strong>, Zaragoza #00</p>
-                            <p className="text-sm md:text-base">Centro, Coatzacoalcos, Veracruz, 96XXX</p>
-                            <strong className="mt-2 text-sm md:text-base">Dirección predeterminada.</strong>
-                        </div>
-                        <div className="w-full flex flex-col gap-3 p-3 border-1 bg-gray-100 rounded-lg hover:border-blue-500 duration-150 ease-in-out">
-                            <p className="text-sm md:text-base"><strong>Luis N</strong>, Zaragoza #00</p>
-                            <p className="text-sm md:text-base">Centro, Coatzacoalcos, Veracruz, 96XXX</p>
-                            <strong className="mt-2 text-sm md:text-base">Dirección predeterminada.</strong>
-                        </div>
-                        <div className="w-full flex flex-col gap-3 p-3 border-1 bg-gray-100 rounded-lg hover:border-blue-500 duration-150 ease-in-out">
-                            <p className="text-sm md:text-base"><strong>Luis N</strong>, Zaragoza #00</p>
-                            <p className="text-sm md:text-base">Centro, Coatzacoalcos, Veracruz, 96XXX</p>
-                            <strong className="mt-2 text-sm md:text-base">Dirección predeterminada.</strong>
-                        </div>
-
+                    <p className="font-bold text-2xl mb-2">Cambiar contraseña</p>
+                    <div>
+                        <p>Escribe tu contraseña actual</p>
+                        <input type="password" className="input mt-2 w-full" />
+                        <p className="mt-5">Escribe tu nueva contraseña</p>
+                        <input type="password" className="input mt-2 w-full" />
+                        <button className="btn btn-primary w-full mt-5 text-white">Guardar cambios</button>
                     </div>
                     {/* Link to add and edit addresses page */}
                 </div>

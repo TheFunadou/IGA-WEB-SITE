@@ -51,6 +51,10 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         triggerAlert("cartAdd");
     };
 
+    const buyNow = (item:CartItem) => {
+        
+    }
+
     const removeFromCart = (sku: number) => {
         removeFromCartUtil(sku);
         setCartItems(getCart());

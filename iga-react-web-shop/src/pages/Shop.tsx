@@ -1,4 +1,7 @@
+// Components
 import ProductCard from "../components/ProductCard";
+import ProductCardMainVersion from "../components/ProductCardComponents/ProductCardMainVersion";
+
 // Products data example
 import ProductsData from "./products_example.json"
 import CategoriesData from "./categories_tree.json"
@@ -8,7 +11,7 @@ import { useState } from "react";
 import ReactPaginate from "react-paginate";
 
 const Shop: React.FC = () => {
-    
+
     //Product pagination 
     const ITEMS_PER_PAGE = 5;
 
@@ -99,16 +102,17 @@ const Shop: React.FC = () => {
                 <p className="text-gray-500 mb-5">Mostrando {(currentPage + 1) * ITEMS_PER_PAGE} de {ProductsData.length} elementos</p>
                 <div className="w-full flex flex-wrap justify-start xl:justify-start items-center sm:gap-5">
                     {currentItems.map((product) => (
-                        <ProductCard
+                        <ProductCardMainVersion
                             key={product.sku}
                             sku={product.sku}
                             productName={product.name}
-                            category={product.description}
-                            price={product.price}
+                            categories={product.description}
+                            unitPrice={product.price}
                             imageUrl={product.image_url}
-                            favoriteInitialState={product.favorite}
+                            favorite={product.favorite}
                             isOffer={product.isOffer}
                             offerDiscount={product.offerDiscount}
+                            productCardClassName="w-1/6"
                         />
                     ))}
                 </div>

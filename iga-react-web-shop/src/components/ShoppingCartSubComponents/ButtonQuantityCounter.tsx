@@ -5,9 +5,10 @@ type Props = {
     initialQuantity:number;
     style?:string;
     onQuantityChange:(newQuantity:number) => void;
+    disabledState?:boolean;
 }
 
-const ButtonQuantityCounter: React.FC<Props> = ({initialQuantity,style,onQuantityChange}) => {
+const ButtonQuantityCounter: React.FC<Props> = ({initialQuantity,style,onQuantityChange,disabledState}) => {
     const [productQuantity, setProductQuantity] = useState<number>(initialQuantity);
 
     const increaseProduct = () => {
@@ -30,8 +31,9 @@ const ButtonQuantityCounter: React.FC<Props> = ({initialQuantity,style,onQuantit
         <div className={`bg-blue-500 py-1 rounded-md flex justify-center gap-5 ${style}`}>
             <button
             onClick={decreaseProduct}
-            disabled={productQuantity === 1}
-            className="cursor-pointer">
+            disabled={(productQuantity === 1)}
+            className="cursor-pointer"
+            >
                 <i className="bi bi-dash text-white text-xl"></i>
             </button>
             <p className="font-bold text-white">{productQuantity}</p>

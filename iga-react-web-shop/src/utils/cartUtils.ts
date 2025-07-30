@@ -33,6 +33,8 @@ export const addToCart = (item: CartItem) => {
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
 };
 
+
+
 export const toggleChecked = (sku: number): CartItem[] => {
   const updatedCart = getCart().map((item) =>
     item.sku === sku ? { ...item, isChecked: !item.isChecked } : item

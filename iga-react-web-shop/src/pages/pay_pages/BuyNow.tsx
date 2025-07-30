@@ -10,7 +10,6 @@ import type { ReceiverAddress } from "../../api/PayProducts/MercadoPago/CreateOr
 import { useEffect, useState, useRef } from "react";
 
 // Components
-import ButtonQuantityCounter from "../../components/ShoppingCartSubComponents/ButtonQuantityCounter";
 
 // Test
 import MercadoPagoPaymentBrickTest from "../../components/MercadoPagoPaymentBrickTest";
@@ -27,11 +26,11 @@ import clsx from "clsx";
 const PayProducts: React.FC = () => {
 
     // Get the cartItems and the addresses from the context
-    const { cartItems, addresses, updateItemQuantity } = useAppContext();
+    const { cartItems, addresses } = useAppContext();
 
     // Get the current selected items if item is checked
     const currentSelectedItems: CartItem[] = cartItems.filter((item: CartItem) => item.isChecked);
-
+    
     // Calculate the subtotal of the all products multiplying unit price x item quantity (per item)
     const subtotalProducts: number = currentSelectedItems.reduce((acc, item) => acc + (item.unit_price * item.quantity), 0);
     // Calculate the shipping cost
@@ -170,7 +169,7 @@ const PayProducts: React.FC = () => {
                                         </thead>
                                         <tbody>
                                             {currentSelectedItems.map((product) => (
-                                                <tr className={currentSelectedItems.length > 1 ? ("border-b-1 border-b-gray-300") : ("")} key={product.sku}>
+                                                <tr className={currentSelectedItems.length > 1 ? ("border-b-1 border-b-gray-300"):("") } key={product.sku}>
                                                     <td></td>
                                                     {/* Padding 5 */}
                                                     <td className="p-2 lg:p-5">
@@ -188,9 +187,7 @@ const PayProducts: React.FC = () => {
                                                                     <div>
                                                                         <p className="text-sm lg:text-lg">Linea de color:</p>
                                                                         <p className="text-sm lg:text-lg">Color:</p>
-                                                                        <p className="text-sm lg:text-lg font-bold">Cantidad:</p>
-                                                                        <ButtonQuantityCounter disabledState={false} initialQuantity={product.quantity} onQuantityChange={(newQty) => updateItemQuantity(product.sku, newQty)} style="w-full mb-2 lg:mb-0 lg:w-2/3" />
-                                                                        <p className="text-sm lg:text-lg mt-5">Eliminar del carrito</p>
+                                                                        <p className="text-sm lg:text-lg font-bold">Cantidad: {product.quantity} piezas</p>
                                                                     </div>
                                                                     <div>
                                                                         <div>
@@ -218,7 +215,7 @@ const PayProducts: React.FC = () => {
                         <div className="bg-white rounded-lg p-5 flex flex-col gap-5">
                             <div className="w-full flex items-start justify-between">
                                 <p className="w-3/6">Productos (Antes de Impuestos):</p>
-                                <p className="w-3/6 text-end">${(subtotalProducts - subtotalProducts * 0.16).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} MXN</p>
+                                <p className="w-3/6 text-end">${(subtotalProducts-subtotalProducts*0.16).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} MXN</p>
                             </div>
                             <div className="w-full flex items-start justify-between">
                                 <p className="w-3/6">Envio:</p>
@@ -230,7 +227,7 @@ const PayProducts: React.FC = () => {
                             </div>
                             <div className="w-full flex items-start justify-between">
                                 <p className="w-3/6">IVA (16%):</p>
-                                <p className="w-3/6 text-end">${(total * 0.16).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                                <p className="w-3/6 text-end">${(total*0.16).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                             </div>
                             <div className="w-full flex items-start justify-between">
                                 <p className="w-3/6 font-bold text-xl">Total (IVA incluido, en caso de ser aplicable):</p>

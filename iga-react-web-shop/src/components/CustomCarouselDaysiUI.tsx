@@ -53,7 +53,7 @@ const CustomCarouselDaysiUI: React.FC<Props> = ({ srcImages, carouselClassName, 
                     <img
                         src={item.image_url}
                         alt={`slide-${item.id}`}
-                        className="w-full h-full"
+                        className="w-full"
                     />
                 </div>
             ))}
